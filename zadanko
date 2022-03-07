@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    body{
+        font-family: Arial;
+    }
+    .naglowek{
+        background-color: green;
+    }
+    .diw{
+        background-color: red;
+    }
+    .akapit1{
+        background-color: yellow;
+    }
+    .akapit2{
+        background-color: purple;
+    }
+
+    .zmiana{
+        font-size: 30px;
+        background-color: black;
+        color: white;
+    }
+
+</style>
+
+
+</head>
+<body>
+    <h1 class="naglowek">Olga lubi koty.</h1>
+    <div class="diw">Artur lubi kota Olgi.</div>
+    <p class="akapit1">Robert lubi jeździć na rowerze Olgi.</p>
+    <p class="akapit2">Ewelina lubi jeść pączki, które robi Olga.</p>
+
+    <script>
+        //pobieramy akapit1
+        const p1 = document.querySelector('p.akapit1');
+        //dodajemy nowa tresc do akapitu
+        p1.innerHTML += 'Robert mowi: "Bardzo lubie sie uczyc JavaScript". ';
+
+        //pobieramy naglowek
+        const naglowekH1 = document.querySelector('h1.naglowek');
+        naglowekH1.textContent = "Olga lubi bawic sie z kotami";
+
+        const czcionkaDiv = document.querySelector('div.diw');
+        //zmieniamy styl diva
+
+        czcionkaDiv.style.fontFamily = 'Times New Roman';
+        //czcionkaDiv.style.backgroundColor = 'orange';
+        czcionkaDiv.classList.add('zmiana');
+
+        const nowyNaglowek = document.createElement('h2');
+        nowyNaglowek.textContent = 'Pies Artura jest fajny';
+        document.querySelector('p.akapit2').appendChild(nowyNaglowek);
+
+        p1.remove();
+
+    </script>
+
+
+</body>
+</html>
